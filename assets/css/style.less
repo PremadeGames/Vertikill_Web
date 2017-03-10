@@ -1,0 +1,149 @@
+// out: style.css
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:100,400,700');
+
+// COLOR PALETTE
+@colorDark3: rgb(51,51,51);
+@colorDark2: rgb(69,69,69);
+@colorDark1: rgb(81,81,81);
+@colorDark0: rgb(132, 126, 135);
+@colorPink: rgb(215,123,186);
+@colorRed: rgb(217,87,99);
+
+// STYLES
+* {
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+body {
+  background: @colorDark2;
+  color: #fff;
+}
+header {
+  background: @colorDark3;
+  width: 100%;
+  height: 600px;
+  perspective: 1px;
+  position: relative;
+  overflow: hidden;
+  
+  & .brand {
+    color: #fff;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  & .layer1 {
+    background: url('../img/layer1.png') no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  & .layer2 {
+    background: url('../img/layer2.png') no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  & .layer3 {
+    background: url('../img/moon.png') no-repeat;
+    background-position: top right;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    bottom: 0px;
+    right: 50px;
+  }
+  & .stars1 {
+    background: url('../img/stars1.png');
+    position: absolute;
+    top: -100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  & .stars2 {
+    background: url('../img/stars2.png');
+    position: absolute;
+    top: -100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}
+section[data-section="text"] {
+  padding: 25px 0px;
+  
+  & h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  & p {
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+}
+section[data-section="gallery"] {
+  padding: 25px 0px;
+  
+  & img {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 16px 1px rgba(0,0,0,0.3);
+  }
+}
+section[data-section="storelinks"] {
+  padding: 25px 0px;
+  
+  & img {
+    height: 60px;
+    margin: 0px 25px;
+  }
+}
+footer {
+  background: @colorDark3;
+  padding: 25px 0px;
+  
+  & section[data-section="creators"] {
+    margin-bottom: 25px;
+    padding: 25px 0px;
+    color: @colorRed;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    
+    & a {
+      color: inherit;
+      text-decoration: none;
+      transition: 0.2s ease all;
+      
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  & section[data-section="legal"] {
+    padding: 10px 0px;
+    text-align: center;
+    opacity: 0.25;
+  }
+}
